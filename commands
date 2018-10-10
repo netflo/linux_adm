@@ -1,0 +1,14 @@
+
+
+resizing a vmdk in virtualBox needs some conversion first :
+  vboxmanage clonehd  vmdk   new-vdi-file   -format vdi  
+  vboxmanage rezise the vdi
+  vboxm clone to vmdk
+
+
+then need to alter partition once boot 
+
+parted /dev/sda2  resizepart x  (start byte) (end say:  30GB)
+resize2fs /dev/sda
+
+df -k should show the updated info
