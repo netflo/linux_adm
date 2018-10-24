@@ -5,3 +5,5 @@ git log --pretty=format:"%h %s" --graph
 git checkout (branch)
 git diff master   (compares with master)
 git branch --list  (all I worked on)   -a is all branches including other people
+
+alias graph="git log --all --decorate --oneline --graph"
