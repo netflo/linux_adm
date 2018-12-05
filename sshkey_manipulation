@@ -1,0 +1,4 @@
+
+ssh-keygen -f ~/.ssh/id_rsa -y > ~/.ssh/id_rsa.pub
+
+ -y      This option will read a private OpenSSH format file and print an OpenSSH public key to stdout.
