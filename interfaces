@@ -1,0 +1,36 @@
+
+#add an interface as follows:
+
+# 1. spot the interface name
+ifconfig -a | grep flags
+
+# 2. edit cloud init
+more /etc/netplan/50-cloud-init.yaml
+# This file is generated from information provided by
+# the datasource.  Changes to it will not persist across an instance.
+# To disable cloud-init's network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    ethernets:
+        enp0s3:
+            addresses: []
+            dhcp4: true
+            optional: true
+        enp0s8:
+            addresses: []
+            dhcp4: true
+            optional: true
+    version: 2
+    
+#3. sudo netplan apply
+
+
+ static IPs example:
+
+        enp0s3:
+            addresses: [192.168.1.2/24, 192.168.1.3/24, 192.168.1.4/24]    # or just 1 IP if not using docker and -p
+            gateway4: 192.168.1.1
+            nameservers:
+              addresses: [8.8.8.8,8.8.4.4]
+            dhcp4: no
