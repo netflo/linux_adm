@@ -6,3 +6,7 @@ wget https://static.rust-lang.org/dist/rust-nightly-x86_64-unknown-linux-gnu.tar
 #then edit the manifest.in file under:   rust-nightly-x86_64-unknown-linux-gnu/llvm-tools-preview
 #and replace all "file" references with "dir"
 
+
+#then  head to reflow
+cargo build
+cargo install --path blah
