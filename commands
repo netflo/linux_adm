@@ -12,3 +12,14 @@ parted /dev/sda2  resizepart x  (start byte) (end say:  30GB)
 resize2fs /dev/sda
 
 df -k should show the updated info
+
+
+
+#hostname display 
+
+hostnamectl
+
+
+#hostname change 
+
+hostnamectl set-hostname blahblah
