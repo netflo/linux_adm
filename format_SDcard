@@ -8,5 +8,11 @@ sudo fdisk -l
 #mount to check perhaps first?
 mount -t vfat /dev/mmvblck0(p1 for partition 1)  /mount_folder
 
-#format with:
-sudo mkfs.exfat -n My_SD_CARD_VOLUME_NAME /dev/mmvblck0
+#wipe the SD card with:
+sudo  wipefs -a /dev/mmvblck0
+
+#create a new partition of type 7 (exFAT) with
+sudo fdisk  /dev/mmvblck0
+
+#alternatively format with:
+#sudo mkfs.exfat -n My_SD_CARD_VOLUME_NAME /dev/mmvblck0
