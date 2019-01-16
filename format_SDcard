@@ -1,0 +1,12 @@
+#for file larger than 4GB the filesystem required is:  exfat to be compatible with Windows:
+apt install exfat-fuse exfat-utils
+
+#format with:
+sudo fdisk -l
+#should be a dev name with mmc
+
+#mount to check perhaps first?
+mount -t vfat /dev/mmvblck0(p1 for partition 1)  /mount_folder
+
+#format with:
+sudo mkfs.exfat -n My_SD_CARD_VOLUME_NAME /dev/mmvblck0
