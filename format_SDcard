@@ -14,5 +14,8 @@ sudo  wipefs -a /dev/mmvblck0
 #create a new partition of type 7 (exFAT) with
 sudo fdisk  /dev/mmvblck0
 
-#alternatively format with:
-#sudo mkfs.exfat -n My_SD_CARD_VOLUME_NAME /dev/mmvblck0
+#format with:
+sudo mkfs.exfat -n My_SD_CARD_VOLUME_NAME /dev/mmvblck0
+
+#check the disk if need be with:
+sudo fsck.exfat /dev/mmvblck0
