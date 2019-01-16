@@ -19,3 +19,13 @@ sudo mkfs.exfat -n My_SD_CARD_VOLUME_NAME /dev/mmvblck0
 
 #check the disk if need be with:
 sudo fsck.exfat /dev/mmvblck0
+
+
+
+
+#wiping a disk
+
+apt install unetbootin
+#run unetbootin and choose  PartedMagic
+# run , pick the disk and choose erase
+
