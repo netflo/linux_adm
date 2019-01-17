@@ -21,10 +21,11 @@ sudo mkfs.exfat -n My_SD_CARD_VOLUME_NAME /dev/mmvblck0
 sudo fsck.exfat /dev/mmvblck0
 
 
+##using ddrescue
+apt install gddrescue
+ddrescue path/to/iso /dev/sdXX --force -D          (get the sdXX from fdisk -l for list )
 
-
-#wiping a disk
-
+##using netbootin  - not great but has a GUI
 apt install unetbootin
 #run unetbootin and choose  PartedMagic
 # run , pick the disk and choose erase
