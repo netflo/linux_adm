@@ -30,3 +30,8 @@ apt install unetbootin
 #run unetbootin and choose  PartedMagic
 # run , pick the disk and choose erase
 
+
+##personal data erasing:
+
+fdisk -l
+sudo shred -v -n1 -z /dev/sdXX
