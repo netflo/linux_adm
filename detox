@@ -1,0 +1,5 @@
+
+
+#walk through the current folder recursively and rename all filenames so they without blanks, foreign characters etc...
+
+detox -r   
