@@ -1,0 +1,10 @@
+
+#console access via terminal:
+
+install minicom
+
+dmesg | grep tty
+
+then minicom -s  (root if need be)
+setup the serial settings as required.
+
