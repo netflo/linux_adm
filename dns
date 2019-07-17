@@ -1,0 +1,9 @@
+
+multi DNS issues:
+
+
+edit:   /etc/systemd/resolved.conf
+Add a line with:  DNS=8.8.8.8 X.36.192.5 etc...
+
+service systemd-resolved restart
+
