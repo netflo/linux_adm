@@ -1,0 +1,3 @@
+set the date with:
+
+date -s "19 APR 2012 11:14:00"
