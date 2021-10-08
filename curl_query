@@ -1,0 +1,4 @@
+
+query a domains to a specific IP address, for example if DNS not implemented yet, dont have access to update hosts file or if there is a load balancer and need to target a specific IP
+
+curl https://DOMAIN.TLD --resolve "DOMAIN.TLD:443:IP_ADDRESS"
